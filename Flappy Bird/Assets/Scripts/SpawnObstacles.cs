@@ -5,8 +5,8 @@ public class SpawnObstacles : MonoBehaviour
     #region Variables
     public GameObject obstacle;
     float spawnXPos = 6f;
-    float maxYPos = -0.3f;
-    float minYPos = -4.5f;
+    float maxYPos = 0.5f;
+    float minYPos = -3.2f;
     public float spawnRateSeconds = 2f;
     #endregion
 
@@ -18,7 +18,7 @@ public class SpawnObstacles : MonoBehaviour
 
     private void SpawnObstacle() {
         float spawnYPos = Random.Range(minYPos, maxYPos);
-        Instantiate(obstacle, new Vector3(spawnXPos, spawnYPos, -1), obstacle.transform.rotation, transform).SetActive(true);
+        Instantiate(obstacle, new Vector3(spawnXPos, spawnYPos, 0), Quaternion.identity, transform);
     }
 
     #endregion
