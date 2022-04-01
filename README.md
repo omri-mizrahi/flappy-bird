@@ -24,6 +24,9 @@ I recommend doing it with these next rules:
 
 If you are starting/want to start learning, contact me and maybe I can help with your journey of learning game development with Unity :)
 
+## Demo
+![demo](Flappy%20Bird\Demos\FlappyBird-SampleScene-Unity.mp4)
+
 ## Credits
 Credit for all sprites - @samuelcust
 
