@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Jump : MonoBehaviour
@@ -10,8 +9,6 @@ public class Jump : MonoBehaviour
     float fallGravity;
     bool _jump = false;
     #endregion
-
-    #region UnityMethods
 
     void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +31,4 @@ public class Jump : MonoBehaviour
             rb.velocity += (fallGravity * Time.deltaTime) * Vector2.up;
         }
     }
-
-    #endregion
 }

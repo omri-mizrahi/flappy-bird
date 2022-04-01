@@ -4,6 +4,7 @@ using System.Collections;
 
 public class GameController : MonoBehaviour
 {
+    #region Variables
     const string PregameGameMode = "pregame";
     const string PlayingGameMode = "playing";
     const string GameoverGameMode = "gameover";
@@ -15,6 +16,7 @@ public class GameController : MonoBehaviour
     public Rigidbody2D playerRb;
     private ObstaclesManager obstaclesManager;
     private string currGameMode = PregameGameMode;
+    #endregion
 
     void Start() {
         obstaclesManager = obstacles.GetComponent<ObstaclesManager>();
