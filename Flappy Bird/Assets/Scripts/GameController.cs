@@ -1,28 +1,59 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameController : MonoBehaviour
 {
+    const string PregameGameMode = "pregame";
+    const string PlayingGameMode = "playing";
+    const string GameoverGameMode = "gameover";
+
+
     public GameObject startMessage;
     public GameObject gameoverMessage;
-    public GameObject ingameObjects;
+    public GameObject obstacles;
     public Rigidbody2D playerRb;
+    private ObstaclesManager obstaclesManager;
+    private string currGameMode = PregameGameMode;
+
+    void Start() {
+        obstaclesManager = obstacles.GetComponent<ObstaclesManager>();
+    }
 
     void Update()
     {
         if (Input.GetButtonDown("Jump")) {
-            StartGame();
+            switch (currGameMode) {
+                case PregameGameMode:
+                    StartGame();
+                    break;
+                case GameoverGameMode:
+                    ResetGame();
+                    break;
+            }
         }
     }
 
     void StartGame() {
         startMessage.SetActive(false);
-        ingameObjects.SetActive(true);
+        obstacles.SetActive(true);
         playerRb.isKinematic = false;
+        currGameMode = PlayingGameMode;
     }
 
-    public static void EndGame() {
-        print("end");
-        // TODO: display game over message for couple seconds, then reset the scene.
+    public void EndGame() {
+        obstaclesManager.StopObstacles();
+        gameoverMessage.SetActive(true);
+        StartCoroutine(gameoverModeAfterTime(1));
+    }
+
+    IEnumerator gameoverModeAfterTime(float seconds) {
+        yield return new WaitForSeconds(seconds);
+        currGameMode = GameoverGameMode;
+    }
+
+    void ResetGame() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

@@ -6,16 +6,14 @@ public class ScoreCounter : MonoBehaviour
     public static int scoreValue = 0;
     TextMeshProUGUI scoreText;
     
-    // Start is called before the first frame update
     void Awake()
     {
         scoreText = GetComponent<TextMeshProUGUI>();
+        scoreValue = 0;
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
         scoreText.text = scoreValue.ToString();
-        // Debug.Log("text: " + scoreText.text.ToString() + "  scoreValue: " + scoreValue.ToString());
     }
 }
