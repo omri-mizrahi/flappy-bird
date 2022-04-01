@@ -2,23 +2,27 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-
-
-    void Start()
-    {
-        
-    }
+    public GameObject startMessage;
+    public GameObject gameoverMessage;
+    public GameObject ingameObjects;
+    public Rigidbody2D playerRb;
 
     void Update()
     {
         if (Input.GetButtonDown("Jump")) {
-            // TODO: start the game. before that, start the scene frozen, or use a different scene.
+            StartGame();
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("GameOver")) {
-            // TODO: reset the scene
-        }
+    void StartGame() {
+        startMessage.SetActive(false);
+        ingameObjects.SetActive(true);
+        playerRb.isKinematic = false;
     }
+
+    public static void EndGame() {
+        print("end");
+        // TODO: display game over message for couple seconds, then reset the scene.
+    }
+
 }

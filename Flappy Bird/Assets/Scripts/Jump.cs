@@ -30,7 +30,7 @@ public class Jump : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
             _jump = false;
         }
-        if (rb.velocity.y <= 1) {
+        if (rb.velocity.y <= 1 && rb.velocity.y != 0) {
             rb.velocity += (fallGravity * Time.deltaTime) * Vector2.up;
         }
     }
