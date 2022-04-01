@@ -25,7 +25,7 @@ I recommend doing it with these next rules:
 If you are starting/want to start learning, contact me and maybe I can help with your journey of learning game development with Unity :)
 
 ## Demo
-![demo](Flappy%20Bird\Demos\FlappyBird-SampleScene-Unity.gif)
+![demo](https://github.com/kuskus110/flappy-bird/blob/main/Flappy%20Bird/Demos/FlappyBird-SampleScene-Unity.gif)
 
 ## Credits
 Credit for all sprites - @samuelcust
