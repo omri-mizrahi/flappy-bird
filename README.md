@@ -21,6 +21,7 @@ I recommend doing it with these next rules:
 * Don't use a step by step tutorial. It will cause you to not remember the basics, and you won't be able to build alone your next game.
 * Make progress with small steps and don't give up!
 
+The most helpful youtube video I saw about learning game dev is this: [How I learned Unity without following tutorials](https://www.youtube.com/watch?v=vFjXKOXdgGo)
 
 If you are starting/want to start learning, contact me and maybe I can help with your journey of learning game development with Unity :)
 
