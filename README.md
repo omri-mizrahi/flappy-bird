@@ -1,5 +1,7 @@
-# Flappy Bird
+# Flappy Bird Game
 A Flappy Bird clone, made with Unity, for the purpose of learning.
+
+[My game on Unity Play](https://play.unity.com/mg/other/flappy-bird-23)
 
 ## Description
 After learning the basics of Unity, I thought I would learn a lot by building a clone of some simple game. Indeed I learned and explored a bunch of Unity and general game dev basic skills during the process of making this game. 
@@ -7,7 +9,6 @@ After learning the basics of Unity, I thought I would learn a lot by building a 
 ## Help me learn and improve
 If you are an experienced Unity developer, or C# developer I would be very glad to recieve comments and review about my project and code. Help me learn :)
 
-#
 
 ## My recommendation for learning
 If you want to learn game dev I strongly recommend you to build Flappy Bird (or some other relatively simple game).
@@ -22,3 +23,8 @@ I recommend doing it with these next rules:
 
 
 If you are starting/want to start learning, contact me and maybe I can help with your journey of learning game development with Unity :)
+
+## Credits
+Credit for all sprites - @samuelcust
+
+https://github.com/samuelcust/flappy-bird-assets
